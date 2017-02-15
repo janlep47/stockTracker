@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/detail_price_info_height"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/toolbar_padding"
+            android:text="@string/current_price_title"
+            android:textSize="@dimen/detail_price_text_size"/>
+        <TextView
+            android:id="@+id/detail_current_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/detail_price_text_size"/>
+        <TextView
+            android:id="@+id/detail_price_change"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/detail_text_size"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/detail_chart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:paddingTop="@dimen/image_padding"
+        android:paddingBottom="@dimen/image_padding"
+        android:paddingStart="@dimen/image_padding"
+        android:paddingEnd="@dimen/image_padding"
+        android:adjustViewBounds="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/detail_graph_button_1D"
+            android:text="@string/graph_button_1D"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textSize="@dimen/detail_button_text_size"/>
+
+        <Button
+            android:id="@+id/detail_graph_button_5D"
+            android:text="@string/graph_button_5D"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textSize="@dimen/detail_button_text_size"/>
+
+        <Button
+            android:id="@+id/detail_graph_button_3M"
+            android:text="@string/graph_button_3M"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textSize="@dimen/detail_button_text_size"/>
+
+        <Button
+            android:id="@+id/detail_graph_button_6M"
+            android:text="@string/graph_button_6M"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textSize="@dimen/detail_button_text_size"/>
+
+        <Button
+            android:id="@+id/detail_graph_button_1Y"
+            android:text="@string/graph_button_1Y"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textSize="@dimen/detail_button_text_size"/>
+
+        <Button
+            android:id="@+id/detail_graph_button_5Y"
+            android:text="@string/graph_button_5Y"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textSize="@dimen/detail_button_text_size"/>
+
+        <Button
+            android:id="@+id/detail_graph_button_MAX"
+            android:text="@string/graph_button_MAX"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:textSize="@dimen/detail_button_text_size"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

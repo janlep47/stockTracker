@@ -1,0 +1,95 @@
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
+    <string name="app_name">Stocks</string>
+    <string name="action_portfolio">Edit Portfolio</string>
+    <string name="action_add_stock">Add Stock</string>
+    <string name="action_delete_stock">Delete Stocks</string>
+    <string name="action_about">about</string>
+
+    <string name="title_activity_list">StockHawk</string>
+    <string name="title_activity_detail">Stock Detail</string>
+    <string name="title_activity_edit_portfolio">Edit Portfolio</string>
+    <string name="title_activity_add_stock">Add Stock</string>
+
+    <string name="title_add_symbol">Symbol:</string>
+
+    <string name="title_widget_stocklist">Stocks</string>
+
+    <string name="format_price"><xliff:g id="price">%1.2f</xliff:g> </string>
+    <string name="format_pct_price_change"><xliff:g id="pct_price_change">%1.2f</xliff:g> </string>
+    <string name="format_intk_number"><xliff:g id="intk_number">%1dK</xliff:g> </string>
+    <string name="format_intm_number"><xliff:g id="intm_number">%1dM</xliff:g> </string>
+    <string name="format_intb_number"><xliff:g id="intb_number">%1dB</xliff:g> </string>
+    <!--string name="format_dividend"><xliff:g id="dividend">%1.2f(%2.2\%)</xliff:g> </string-->
+
+    <!-- SyncAdapter related -->
+    <string name="sync_account_type">stocks.com</string>
+    <string name="content_authority">com.android.stocks</string>
+
+    <!-- Empty Stocklist Database -->
+    <string name="empty_stocklist">No Portfolio Information Available</string>
+    <string name="empty_stocklist_no_network">No stock information available. The network is not available to fetch stock data.</string>
+    <string name="empty_stocklist_server_down">No stock information available. The server is not returning data.</string>
+    <string name="empty_stocklist_server_error">No stock information available. The server is not returning valid data. Please check for an updated version of Sunshine.</string>
+    <string name="empty_stocklist_invalid_stock_symbol">No stock information available. The symbol in portfolio is not recognized by the stock server.</string>
+
+    <string name="a11y_symbol">Symbol: <xliff:g id="symbol">%1$s</xliff:g></string>
+    <string name="a11y_price">Price: <xliff:g id="price">%1$s</xliff:g></string>
+    <string name="a11y_price_change">Price change: <xliff:g id="price_change">%1$s</xliff:g></string>
+    <string name="a11y_pct_change">Percent change: <xliff:g id="pct_change">%1$s</xliff:g></string>
+
+    <string name="a11y_open">Openning price:  <xliff:g id="open">%1$s</xliff:g></string>
+    <string name="a11y_close">Previous closing price:  <xliff:g id="prev_close">%1$s</xliff:g></string>
+    <string name="a11y_low">Low price:  <xliff:g id="low">%1$s</xliff:g></string>
+    <string name="a11y_high">High price:  <xliff:g id="high">%1$s</xliff:g></string>
+    <string name="a11y_year_low">52-week low price:  <xliff:g id="year_low">%1$s</xliff:g></string>
+    <string name="a11y_year_high">52-week high price:  <xliff:g id="year_high">%1$s</xliff:g></string>
+    <string name="a11y_mkt_cap">Market capitalization:  <xliff:g id="mkt_cap">%1$s</xliff:g></string>
+    <string name="a11y_volume">Volume:  <xliff:g id="volume">%1$s</xliff:g></string>
+    <string name="a11y_target">Target price:  <xliff:g id="target">%1$s</xliff:g></string>
+    <string name="a11y_avg_vol">Average volume:  <xliff:g id="avg_vol">%1$s</xliff:g></string>
+    <string name="a11y_pe">Price/Earnings ratio:  <xliff:g id="pe">%1$s</xliff:g></string>
+    <string name="a11y_eps">Earnings per share:  <xliff:g id="eps">%1$s</xliff:g></string>
+    <string name="a11y_beta">Beta:  <xliff:g id="beta">%1$s</xliff:g></string>
+    <string name="a11y_dividend">Dividend:  <xliff:g id="dividend">%1$s</xliff:g></string>
+
+    <!-- Detail screen graph data -->
+    <string name="current_price_title">current price: </string>
+
+    <!-- Detail screen data -->
+    <string name="detail_data_blank">     </string>
+    <string name="prev_close">Prev Close</string>
+    <string name="low">Low</string>
+    <string name="year_low">52 Wk Low</string>
+    <string name="mkt_cap">Mkt Cap</string>
+    <string name="target">1Y Target</string>
+    <string name="pe">P/E</string>
+    <string name="beta">Beta</string>
+
+    <string name="open">Open</string>
+    <string name="high">High</string>
+    <string name="year_high">52 Wk High</string>
+    <string name="volume">Volume</string>
+    <string name="avg_vol">Avg Vol (3m)</string>
+    <string name="eps">EPS</string>
+    <string name="dividend">Dividend</string>
+
+    <string name="graph_button_1D">1D</string>
+    <string name="graph_button_5D">5D</string>
+    <string name="graph_button_3M">3M</string>
+    <string name="graph_button_6M">6M</string>
+    <string name="graph_button_1Y">1Y</string>
+    <string name="graph_button_5Y">5Y</string>
+    <string name="graph_button_MAX">MAX</string>
+
+    <string name="delete_stock_msg">Tap the trash icon to delete</string>
+
+    <!-- Key name for storing internet-type status in SharedPreferences -->
+    <string name="pref_status_key" translatable="false">int-status</string>
+
+    <string name="about_dialog_title">About:</string>
+    <string name="about">about</string>
+    <string name="about_dialog_message">Learning exercise using YahooFinance and UDACITY resources.\
+        "Also, tried to duplicate some of the appearance and behavior of the Android YahooFinance app.
+    </string>
+
+</resources>

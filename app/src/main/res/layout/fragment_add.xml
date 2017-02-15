@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@android:color/holo_green_dark">
+
+
+    <LinearLayout
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:paddingLeft="@dimen/toolbar_padding"
+        android:paddingRight="@dimen/toolbar_padding"
+        android:paddingStart="@dimen/toolbar_padding"
+        android:paddingEnd="@dimen/toolbar_padding"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/symbol_label"
+            android:layout_gravity="left|start"
+            android:text="@string/title_add_symbol"
+            android:textSize="@dimen/stocklist_text_size"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/symbol_entry"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/stocklist_text_size"
+            android:singleLine="true"
+            android:inputType="textCapCharacters"
+            android:layout_weight="4"/>
+    </LinearLayout>
+
+
+</android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/add_stock_problem"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/empty_stocklist_server_down"
+        android:gravity="center_horizontal"
+        />
+
+
+</LinearLayout>
+

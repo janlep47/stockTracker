@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="detail_data_width">75dp</dimen>
+    <dimen name="chart_width">310dp</dimen>
+    <dimen name="chart_height">195dp</dimen>
+</resources>

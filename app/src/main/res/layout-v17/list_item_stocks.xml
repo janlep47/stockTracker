@@ -1,0 +1,60 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/touch_selector"
+    android:paddingStart="@dimen/list_item_extra_padding"
+    android:paddingEnd="@dimen/list_item_extra_padding"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:paddingStart="@dimen/abc_list_item_padding_horizontal_material"
+        android:paddingEnd="@dimen/abc_list_item_padding_horizontal_material"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/list_item_symbol_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textSize="@dimen/stocklist_text_size"/>
+
+            <TextView
+                android:id="@+id/list_item_fullname_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="@dimen/tiny_text_size"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/list_item_price_textview"
+            android:layout_width="@dimen/stocklist_text_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="end"
+            android:layout_marginRight="@dimen/stocklist_price_space"
+            android:layout_marginEnd="@dimen/stocklist_price_space"
+            android:textSize="@dimen/stocklist_text_size"/>
+
+        <TextView
+            android:id="@+id/list_item_price_change_textview"
+            android:layout_width="@dimen/stocklist_text_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="end"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/green"
+            android:textSize="@dimen/stocklist_text_size"/>
+
+    </LinearLayout>
+</FrameLayout>
