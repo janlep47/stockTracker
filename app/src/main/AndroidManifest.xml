@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.stocks">
+
+    <!-- To allow network access. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Permissions required by the sync adapter -->
+    <uses-permission
+        android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission
+        android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+
+    <!-- Permissions required to make our UI more friendly -->
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.Main"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.Details"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.stocks.MainActivity" />
+        </activity>
+        <activity
+            android:name=".EditPortfolioActivity"
+            android:label="@string/title_activity_edit_portfolio"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/SettingsTheme"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.stocks.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AddStockActivity"
+            android:label="@string/title_activity_add_stock"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/SettingsTheme"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.stocks.MainActivity" />
+        </activity>
+
+        <provider
+            android:authorities="@string/content_authority"
+            android:name=".data.StocksProvider"
+            android:exported="false"
+            android:syncable="true" />
+
+        <!-- SyncAdapter's dummy authentication service -->
+        <service android:name=".sync.StockHawkAuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <!-- The SyncAdapter service -->
+        <service
+            android:name=".sync.StockHawkSyncService"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+        <!-- collection widget -->
+        <receiver
+            android:name=".widget.StocklistWidgetProvider"
+            android:label="@string/title_widget_stocklist"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.android.stocks.ACTION_DATA_UPDATED" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_list" />
+        </receiver>
+        <service
+            android:name=".widget.StocklistWidgetRemoteViewsService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+    </application>
+
+</manifest>
