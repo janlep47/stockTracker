@@ -9,6 +9,8 @@ package com.android.stocks;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewCompat;
@@ -122,7 +124,13 @@ public class StocklistAdapter extends RecyclerView.Adapter<StocklistAdapter.Stoc
         if (priceChange > 0.0) {
             stocklistAdapterViewHolder.mPriceChngView.setBackgroundResource(R.color.green);
         } else {
-            stocklistAdapterViewHolder.mPriceChngView.setBackgroundResource(R.color.red);
+            if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+                stocklistAdapterViewHolder.mPriceChngView.setBackgroundResource(R.color.red);
+            } else {
+                stocklistAdapterViewHolder.mPriceChngView.setBackgroundTintMode(PorterDuff.Mode.OVERLAY);
+                stocklistAdapterViewHolder.mPriceChngView.setBackgroundColor(mContext.getResources().getColor(R.color.red,
+                        mContext.getTheme()));
+            }
         }
         mICM.onBindViewHolder(stocklistAdapterViewHolder, position);
     }

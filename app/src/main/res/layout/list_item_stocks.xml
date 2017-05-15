@@ -50,6 +50,7 @@
             android:layout_marginEnd="@dimen/stocklist_price_space"
             android:textSize="@dimen/stocklist_text_size"/>
 
+        <!--android:backgroundTint="@color/green"-->
         <TextView
             android:id="@+id/list_item_price_change_textview"
             android:layout_width="@dimen/stocklist_text_width"
@@ -57,7 +58,7 @@
             android:layout_gravity="center"
             android:gravity="right"
             android:textColor="@color/white"
-            android:backgroundTint="@color/green"
+            android:background="@color/white"
             android:textSize="@dimen/stocklist_text_size"/>
 
     </LinearLayout>

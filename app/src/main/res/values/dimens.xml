@@ -4,13 +4,21 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
-    <dimen name="stocklist_detail_horizontal_padding">32dp</dimen>
-    <dimen name="stocklist_text_size">32sp</dimen>
+    <!--dimen name="stocklist_detail_horizontal_padding">32dp</dimen>
+    <dimen name="stocklist_text_size">32sp</dimen-->
     <!--dimen name="stocklist_text_width">49dp</dimen-->
     <!--dimen name="stocklist_price_space">8dp</dimen-->
-    <dimen name="stocklist_text_width">150dp</dimen>
+    <!--dimen name="stocklist_text_width">150dp</dimen>
     <dimen name="stocklist_price_space">5dp</dimen>
-    <dimen name="tiny_text_size">12sp</dimen>
+    <dimen name="tiny_text_size">12sp</dimen-->
+
+    <dimen name="stocklist_detail_horizontal_padding">32dp</dimen>
+    <dimen name="stocklist_text_size">32dp</dimen>
+    <!--dimen name="stocklist_text_width">49dp</dimen-->
+    <!--dimen name="stocklist_price_space">8dp</dimen-->
+    <dimen name="stocklist_text_width">115dp</dimen>
+    <dimen name="stocklist_price_space">5dp</dimen>
+    <dimen name="tiny_text_size">12dp</dimen>
 
 
     <!-- Extra Padding -->
@@ -39,7 +47,8 @@
     <dimen name="detail_price_info_height">30dp</dimen>
 
     <dimen name="chart_width">310dp</dimen>
-    <dimen name="chart_height">520dp</dimen>
+    <!--dimen name="chart_height">520dp</dimen-->
+    <dimen name="chart_height">195dp</dimen>
 
 
     <dimen name="widget_list_default_width">250dp</dimen>
