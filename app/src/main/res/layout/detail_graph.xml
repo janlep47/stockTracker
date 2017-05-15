@@ -47,7 +47,7 @@
     </LinearLayout>
 
 
-    <ImageView
+    <!--ImageView
         android:id="@+id/detail_chart"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -58,7 +58,12 @@
         android:paddingRight="@dimen/image_padding"
         android:paddingStart="@dimen/image_padding"
         android:paddingEnd="@dimen/image_padding"
-        android:adjustViewBounds="false"/>
+        android:adjustViewBounds="false"/-->
+    <ImageView
+        android:id="@+id/detail_chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"/>
 
     <LinearLayout
         android:layout_width="match_parent"

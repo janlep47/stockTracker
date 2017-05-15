@@ -105,6 +105,10 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
     public static final int COL_STOCK_STOCK_EXCHANGE = 19;
     public static final int COL_STOCK_BETA = 20;
 
+    private static final int CHART_MIN_WIDTH = 1300;
+    private static final int CHART_MIN_HEIGHT = 500;
+
+
     private ImageView mChartView;
 
     //private TextView mDateView;
@@ -141,12 +145,10 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
     private TextView mStockExchangeView;
     private TextView mBetaView;
 
-    private int mChartWidth, mChartHeight;
-
     private String chartType = "1D";
     private boolean needToLoadChart = true;
     private String chartUrl;
-    private static final String BASE_CHART_URL = "http://chart.finance.yahoo.com/z?s=";
+    private static final String BASE_CHART_URL = "https://chart.finance.yahoo.com/z?s=";
     private static final String BASE_CHART_URL_END = "&q=l&l=off";
 
 
@@ -236,9 +238,6 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
         //mBetaView = (TextView) rootView.findViewById(R.id.beta_textview);
         mDividendView = (TextView) rootView.findViewById(R.id.dividend_textview);
         //mDividendPctView = (TextView) rootView.findViewById(R.id.dividend_pct_textview);
-
-        mChartWidth = R.dimen.chart_width;
-        mChartHeight = CHART_HEIGHT;  // FOR NOW ONLY >>>>>>>>
 
         return rootView;
     }
@@ -391,15 +390,17 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
 
     private void loadChart(String url) {
         mLoadingPanel.setVisibility(View.VISIBLE);
-        mChartWidth=CHART_WIDTH;
         //350x200
-
         Picasso.with(getActivity())
                 .load(url)
-                //.placeholder(R.drawable.blank_chart)
-                .noFade().resizeDimen(R.dimen.chart_width,R.dimen.chart_height)
+                .fit()
+                .placeholder(R.drawable.blank_chart)
+                //.noFade().resizeDimen(R.dimen.chart_width,R.dimen.chart_height)
                 .error(R.drawable.blank_chart)
                 .into(mChartView);
+        mChartView.setMinimumHeight(CHART_MIN_HEIGHT);
+        mChartView.setMinimumWidth(CHART_MIN_WIDTH);
+        mChartView.setScaleType(ImageView.ScaleType.FIT_XY);
         mLoadingPanel.setVisibility(View.GONE);
     }
 
